@@ -1,0 +1,34 @@
+<div id="menu">
+    <h1>رانندگی شبانه بنز</h1>
+    <p>ماشین خود را انتخاب کنید:</p>
+    <div>
+        <button class="btn" onclick="startGame('gclass')">بنز G-Class (مشکی)</button>
+        <button class="btn" onclick="startGame('cls')">بنز CLS 2013 (مشکی)</button>
+    </div>
+    <p style="margin-top:20px;">محیط جاده را انتخاب کنید:</p>
+    <div>
+        <button class="btn" onclick="setRoad('highway')">بزرگراه ۶ لاینه (ترافیک، دریا، شهر)</button>
+        <button class="btn" onclick="setRoad('mountain')">جاده کوهستانی (پیچ‌درپیچ / چالوس)</button>
+    </div>
+</div>
+
+<div id="dash">سرعت: <span id="speed">۰</span> km/h | دنده: <span id="gear">D</span></div>
+
+<div class="top-controls">
+    <button class="t-btn" onclick="toggleLights()">چراغ‌ها</button>
+    <button class="t-btn" onclick="toggleHazards()">چهارفلشر</button>
+    <button class="t-btn" onclick="toggleGear()">دنده (D/R)</button>
+</div>
+
+<div class="controls">
+    <div class="control-group">
+        <div class="c-btn" ontouchstart="turnLeft=true" ontouchend="turnLeft=false" onmousedown="turnLeft=true" onmouseup="turnLeft=false">←</div>
+        <div class="c-btn" ontouchstart="turnRight=true" ontouchend="turnRight=false" onmousedown="turnRight=true" onmouseup="turnRight=false">→</div>
+    </div>
+    <div class="control-group">
+        <div class="c-btn" ontouchstart="isBraking=true" ontouchend="isBraking=false" onmousedown="isBraking=true" onmouseup="isBraking=false">ت</div>
+        <div class="c-btn" ontouchstart="isAccelerating=true" ontouchend="isAccelerating=false" onmousedown="isAccelerating=true" onmouseup="isAccelerating=false">گ</div>
+    </div>
+</div>
+
+<canvas id="gameCanvas"></canvas>
